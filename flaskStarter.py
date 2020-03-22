@@ -1,6 +1,11 @@
 from flask import Flask, render_template, request
+import json
+from zoomus import ZoomClient
+import os
 
 app = Flask(__name__)
+
+client = ZoomClient(os.environ['ZOOM_KEY'], os.environ['ZOOM_SECRET'])
 
 @app.route('/')
 def first_page():
@@ -8,6 +13,7 @@ def first_page():
 
 @app.route('/response_page', methods = ['POST'])
 def response_page():
+    client.webinar.register(id="709-106-138", email="moseley.sammy@gmail.com", first_name="Samuel", last_name="Moseley")
     name = request.form['name']    
     return render_template('response_page.html', name=name)
 
