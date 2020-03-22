@@ -1,83 +1,55 @@
-# Flask React Boilerplate
+# Flask for Heroku
 
-Production-ready, one-click deployable boilerplate for [React](http://facebook.github.io/react/), [Webpack](http://webpack.github.io/), [Flask](http://flask.pocoo.org/) and [PostgreSQL](http://www.postgresql.org/).
 
-## One-click production deployment
+Click to see :point_right: [![App on Heroku](https://img.shields.io/badge/App%20on-Heroku-brightgreen)](https://flask-heroku-starter-app.herokuapp.com/)  ................  Click to read :point_right: [![Post on dev.to](https://img.shields.io/badge/Post%20on-dev.to-blueviolet)](https://dev.to/aninditabasu/how-to-move-your-flask-app-from-the-local-machine-to-the-heroku-cloud-egk)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/alexkuz/flask-react-boilerplate)
+## _The unofficial :slightly_smiling_face: starter pack_
 
-This is what you will get:
+This repository has everything you need to get a _basic_ web app in Python to run on Heroku. Consequently, the repo has the barest minimum files needed to build a web app with Flask.
 
-https://flask-react-boilerplate.herokuapp.com/
 
-## Local installation
+### How to use
 
-You'll neel a little more than one click.
+1. Clone or fork this repository.
+2. Get yourself a Heroku account if you don't already have one.
+3. Create an app on Heroku by using the user interface of your Heroku account dashboard (Dashboard > New > Create new app). Follow the on-screen instructions to name your app, and connect it to your cloned or forked repository. 
 
-**Prerequisites**:
+   If this is the first time you are using your Heroku account to connect to anything on your GitHub account, you'll be asked to allow inter-site authentication.
+   
+   While creating the app, choose the manual option for deployment.
+   
+4. After the app is created, deploy it manually.
 
-- Pip (https://pip.pypa.io/en/latest/installing.html)
-- PostgreSQL (http://www.postgresql.org/download/)
-- NPM (https://docs.npmjs.com/getting-started/installing-node)
+### Files in this repository
 
-Clone repository:
+- templates/first_page.html *
 
-```
-git clone https://github.com/alexkuz/flask-react-boilerplate.git
+  _Required._ This is the app home page that's displayed when the app is launched.
+  
+- templates/response_page.html *
 
-cd react-webpack-boilerplate
-```
+  _Required._ This page is displayed after someone enters an input on the app home page.
+  
+- flaskStarter.py *
 
-Install npm dependencies:
+  _Required._ This is your Flask app.
 
-```
-npm install
-```
+- LICENSE
 
-Setup python environment and install dependencies:
+  _Optional._ The license under which I'm making available this repo. Not required for the app to work.
 
-```
-virtualenv venv
+- Pipfile *
 
-source venv/bin/activate     # or venv/bin/activate.fish or whatever
+  _Required._ Tells Heroku which Python packages to install in the environment before building the app.
 
-pip install -r requirements.txt
-```
+- Procfile *
 
-Copy `.env.example` config file to `.env`:
+  _Required._ Tells Heroku how to launch the app (which, in this case, is as a web page).
 
-```
-cp .env.example .env
-```
+- README.md
 
-Start PostgreSQL service if needed:
+  _Optional._ Not needed to make your app run. Is also the file you're reading right now.
 
-```
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
-```
+- requirements.txt *
 
-Create database tables:
-
-```
-heroku local initdb
-```
-
-Finally, start local server:
-
-```
-heroku local web
-
-open http://localhost:3001
-```
-
-## What do we have here?
-
-- A basket of kittens 🐱
-- Simple Flask **API**, powered with [**Flask-RESTful**](https://flask-restful.readthedocs.org/en/0.3.3/), [**SQLAlchemy**](http://www.sqlalchemy.org/) and [**PostgreSQL**](http://www.postgresql.org/)
-- **UI**, powered with [**React**](http://facebook.github.io/react/), [**Babel**](https://babeljs.io/), [**Webpack**](http://webpack.github.io/) and [**React Transform HMR**](https://github.com/gaearon/react-transform-hmr)
-
-## License
-
-Copyright 2015, Alexander Kuznetsov &lt;alexkuz@gmail.com&gt;
-
-This boilerplate is based on [**React Webpack Boilerplate**](https://github.com/srn/react-webpack-boilerplate): MIT © [Søren Brokær](http://srn.io)
+  _Required._ Tells Heroku the versions of the Python packages needed.
