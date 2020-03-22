@@ -7,8 +7,9 @@ name = "pypi"
 gunicorn = "*"
 flask = "*"
 requests = "*"
+zoomus = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.7.5"
+python_version = "3.7.2"
