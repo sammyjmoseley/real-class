@@ -69,7 +69,7 @@
     "babel-runtime": "6.3.19",
     "clean-webpack-plugin": "0.1.6",
     "coveralls": "2.11.6",
-    "eslint": "1.10.3",
+    "eslint": "4.18.2",
     "eslint-loader": "1.2.0",
     "eslint-plugin-babel": "3.0.0",
     "eslint-plugin-react": "3.16.0",
